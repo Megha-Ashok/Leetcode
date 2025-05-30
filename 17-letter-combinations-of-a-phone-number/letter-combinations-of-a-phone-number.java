@@ -1,8 +1,25 @@
 class Solution {
-        static String arr[]={".","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+    static String arr[]={".","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+    static List<String>res;
     public List<String> letterCombinations(String digits) {
-        if(digits.length()==0)return new ArrayList<>();
-        ArrayList<String>w=new ArrayList<>();
+      int n=digits.length();
+      if(n==0)return new ArrayList<>();
+      res=new ArrayList<>();
+      callfun(digits,"",n,0);
+      return res;
+    }
+    public static void callfun(String digit,String str,int n,int idx){
+      if(idx==n){
+        res.add(str);
+        return;
+      }
+      String temp=arr[digit.charAt(idx)-'1'];
+      for(char ch:temp.toCharArray()){
+        callfun(digit,str+ch,n,idx+1);
+      }
+    }
+}
+/*  ArrayList<String>w=new ArrayList<>();
        String p=arr[digits.charAt(0)-'1'];
         ArrayList<String>q=new ArrayList<>();
             for(int i=0;i<p.length();i++){
@@ -19,6 +36,4 @@ class Solution {
             }
             q=new ArrayList<>(w);
             }
-            return q;
-    }
-}
+            return q;*/ 

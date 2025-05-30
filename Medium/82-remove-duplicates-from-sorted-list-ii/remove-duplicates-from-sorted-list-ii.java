@@ -10,6 +10,7 @@
  */
  import java.util.*;
 class Solution {
+    //added
     public ListNode deleteDuplicates(ListNode head) {
      ListNode dummy=new ListNode(0);
      dummy.next=head;

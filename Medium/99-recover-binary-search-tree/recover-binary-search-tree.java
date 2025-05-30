@@ -17,6 +17,7 @@ class Solution {
     static ArrayList<Integer>arr;
     static TreeNode cur;
     static int i;
+    //added
     public void recoverTree(TreeNode root) {
         arr=new ArrayList<>();
         callfun(root);

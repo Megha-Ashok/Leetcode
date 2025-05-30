@@ -1,5 +1,6 @@
 class Solution {
     static List<List<Integer>>res;
+    //added
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         ArrayList<Integer>arr=new ArrayList<>();
         res=new ArrayList<>();

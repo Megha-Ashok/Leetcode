@@ -1,5 +1,6 @@
 class Solution {
     static List<List<String>>res;
+    //added
     public List<List<String>> partition(String s) {
       res=new ArrayList<>();
       callfun(0,s,new ArrayList<>());

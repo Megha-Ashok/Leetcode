@@ -22,6 +22,7 @@ class Node {
 */
 
 class Solution {
+  //added
     public Node connect(Node root) {
         if(root==null)return null;
         Queue<Node>res=new LinkedList<>();

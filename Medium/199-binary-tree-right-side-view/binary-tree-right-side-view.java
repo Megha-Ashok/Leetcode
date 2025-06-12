@@ -22,7 +22,7 @@ class Solution {
       while(!arr.isEmpty()){
           int size=arr.size();
           for(int i=1;i<=size;i++){
-            TreeNode temp=arr.remove();
+           TreeNode temp=arr.remove();
             if(i==size)res.add(temp.val);
             if(temp.left!=null)arr.add(temp.left);
             if(temp.right!=null)arr.add(temp.right);

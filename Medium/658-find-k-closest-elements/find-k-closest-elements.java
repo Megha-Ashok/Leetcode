@@ -1,22 +1,19 @@
 class Solution {
     public List<Integer> findClosestElements(int[] arr, int k, int x) {
-    Queue<Integer>que=new LinkedList<>();
     List<Integer>res=new ArrayList<>();
-    for(int i=0;i<arr.length;i++){
-      if(k>0){
-        que.add(arr[i]);
-        k--;
+    int start=0,end=arr.length-1;
+    while(end-start>=k){
+      if(Math.abs(arr[start]-x)>Math.abs(arr[end]-x)){
+        start++;
       }
       else{
-        if(Math.abs(que.peek()-x)>Math.abs(arr[i]-x)){
-          que.poll();
-          que.add(arr[i]);
-        }
+        end--;
       }
-    }
-    while(!que.isEmpty()){
-      res.add(que.poll());
-    }
-    return res;
+     }
+     for(int i=start;i<=end;i++){
+      res.add(arr[i]);
+     }
+     return res;
+     
     }
 }

@@ -23,7 +23,16 @@ class Solution {
           j++;
         }
         if(j==n)return true;
-        i++;
+        char ch=s2.charAt(j+i);
+        if(!hash.containsKey(ch))i=i+j+1;
+        else{
+          j=0;
+          while(j<n){
+            if(s2.charAt(i+j)==ch)break;
+            j++;
+          }
+          i=i+j+1;
+        }
        }
        return false;
     }

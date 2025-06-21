@@ -24,7 +24,7 @@ class Solution {
             prev.next=cur.next;
         }
         else{
-            prev=cur;
+           prev=cur;
         }
         cur=cur.next;
      }

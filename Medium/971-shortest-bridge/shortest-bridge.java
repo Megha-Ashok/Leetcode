@@ -7,7 +7,6 @@ class Solution {
           for(int j=0;j<grid[0].length;j++){
             if(grid[i][j]==1 && visit[i][j]!=1){
               callfun(i,j,grid,visit);
-              System.out.println(i+" "+j);
             }
           }
         }

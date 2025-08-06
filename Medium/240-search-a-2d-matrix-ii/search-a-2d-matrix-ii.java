@@ -3,7 +3,8 @@ class Solution {
       int n=matrix.length;
       int m=matrix[0].length;
       for(int i=0;i<m;i++){
-         if(matrix[n-1][i]>=target){
+        if(matrix[n-1][i]==target)return true;
+        if(matrix[n-1][i]>target){
           if(binarySearch(0,n-1,i,target,matrix))return true;
          }
       }

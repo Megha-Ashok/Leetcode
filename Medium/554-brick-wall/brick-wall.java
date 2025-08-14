@@ -15,7 +15,6 @@ class Solution {
       }
       int max=0;
       for(Map.Entry<Integer,Integer>set:hash.entrySet()){
-        System.out.println(set.getKey()+" "+set.getValue());
         max=Math.max(max,set.getValue());
       }
       return wall.size()-max;

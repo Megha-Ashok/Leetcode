@@ -11,15 +11,15 @@ class Solution {
        int count=0;
        boolean flag=false;
        while(left<n){
-        flag=false;
+        flag=true;
         while((right-left+1)<k){
             if(arr[right]==arr[right+1]){
                 left=right+1;
                 right++;
+                flag=false;
                 break;
             }
             right++;
-           if(right-left+1==k)flag=true;
         }
         if(flag){
         count++;
